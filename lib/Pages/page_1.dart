@@ -11,7 +11,9 @@ class Page1 extends StatefulWidget {
 
 class _Page1State extends State<Page1> {
   bool signup=true;
-
+  TextEditingController name=TextEditingController();
+  TextEditingController email=TextEditingController();
+  TextEditingController password=TextEditingController();
   @override
   void initState() {
     super.initState();
@@ -128,7 +130,12 @@ class _Page1State extends State<Page1> {
                           ),
                         ),
                         const SizedBox(height: 20,),
-                        CustomContainer(signup: signup),
+                        CustomContainer(signup: signup,
+                        name: name,
+                          email: email,
+                            password: password,
+
+                        ),
                         const SizedBox(height: 20,),
                         signup ? const CardButton(txt: "Sign Up") : const CardButton(txt: "Sign In"),
                         const SizedBox(height: 20,),
