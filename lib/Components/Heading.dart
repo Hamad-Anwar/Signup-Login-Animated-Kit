@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 class Heading extends StatelessWidget {
-  const Heading({super.key,required this.signup});
+  const Heading({super.key,required this.signup,this.txt});
   final bool signup;
+  final String? txt;
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          signup?"Sign up":"Sign in",
+          txt!=null ? txt!: (signup? "Sign up" : "Sign in"),
           style: const TextStyle(
             fontSize: 34,
             fontFamily: "Poppins",
