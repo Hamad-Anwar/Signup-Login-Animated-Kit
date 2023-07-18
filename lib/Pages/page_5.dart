@@ -81,12 +81,12 @@ class _Page5State extends State<Page5> {
                 ),
               )
           ),
-          const Expanded(
-              flex: 2,
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: SocialMediaIcons(),
-              ))
+           const Expanded(
+               flex: 2,
+               child: Padding(
+                 padding: EdgeInsets.only(left: 30),
+                 child: SocialMediaIcons(),
+               ),)
         ],
       ),
     );
