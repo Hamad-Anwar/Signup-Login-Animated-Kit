@@ -48,13 +48,7 @@ class _Page3State extends State<Page3> {
 
               const Text("Or continue with"),
               const SizedBox(height: 20,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  socialMedia("Assets/Svg/google_logo.svg", "Google"),
-                  socialMedia("Assets/Svg/apple_logo.svg", "Apple")
-                ],
-              ),
+          socialMedia("Assets/Svg/google_logo.svg", "Google"),
               const SizedBox(height: 20,),
               GestureDetector(
                 onTap: onTap,
@@ -77,7 +71,50 @@ class _Page3State extends State<Page3> {
                   ),
                 ),
               ),
-              const SizedBox(height: 50,),
+              const SizedBox(height: 10,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    height: 50,
+                    width: 130,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.grey)
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.facebook,color: Colors.blue,),
+                        SizedBox(width: 5,),
+                        Text(
+                          "Facebook",
+                          style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold,fontSize: 17),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 50,
+                    width: 130,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.grey)
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.apple,color: Colors.black,),
+                        SizedBox(width: 5,),
+                        Text(
+                          "Apple",
+                          style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 17),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),const SizedBox(height: 20,),
             ],
           ),
         ),
@@ -91,9 +128,9 @@ class _Page3State extends State<Page3> {
   Widget socialMedia(String asset,String text){
     return Container(
       height: 50,
-      width: 130,
+      width: 250,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(30),
           border: Border.all(color: Colors.grey)
       ),
       child: Row(
@@ -101,7 +138,7 @@ class _Page3State extends State<Page3> {
         children: [
           SvgPicture.asset(asset),
           const SizedBox(width: 10,),
-          Text(text,style: const TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 20),)
+          Text(text,style: const TextStyle(color: Colors.orange,fontWeight: FontWeight.bold,fontSize: 20),)
         ],
       ),
     );

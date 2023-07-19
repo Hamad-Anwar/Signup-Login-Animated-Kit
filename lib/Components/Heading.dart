@@ -6,7 +6,7 @@ class Heading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Text(
           txt!=null ? txt!: (signup? "Sign up" : "Sign in"),

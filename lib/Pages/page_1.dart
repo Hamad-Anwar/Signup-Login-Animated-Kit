@@ -17,11 +17,10 @@ class _Page1State extends State<Page1> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 2), () {
+    Timer(Duration.zero, () {
       showSignUpSheet();
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -30,7 +29,6 @@ class _Page1State extends State<Page1> {
       ),
     );
   }
-
   showSignUpSheet() {
     showGeneralDialog
       (
