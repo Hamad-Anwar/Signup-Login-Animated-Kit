@@ -6,7 +6,7 @@ To get started, you need to have [Flutter](https://flutter.dev/docs/get-started/
 2. Run the command `flutter packages get` to install the required packages.
 3. Run `flutter run` to build and run the debug app on your emulator/phone
 ## Demo
-<img src="./pic1.png">
+<img src="./ui.png">
 <img src="./pic2.png">
 
 
